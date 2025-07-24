@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const downloadBtn = document.getElementById("downloadBtn");
   let firstClickDone = false;
@@ -6,8 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (downloadBtn) {
     downloadBtn.addEventListener("click", function () {
       if (!firstClickDone) {
+        // Open first ad link
         window.open("https://www.profitableratecpm.com/kf3jx4w50?key=500dd3d43afaaa8033eaa24c8da49540", "_blank");
-        window.open("https://otieu.com/4/9585282", "_blank");
+
+        // Wait 300ms, then open the second ad in a new tab
+        setTimeout(() => {
+          window.open("https://otieu.com/4/9585282", "_blank");
+        }, 300);
+
         downloadBtn.textContent = "Click Again to Download";
         firstClickDone = true;
       } else {
